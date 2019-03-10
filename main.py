@@ -65,7 +65,7 @@ def index():
     if session['username'] == 'admin':
         news = NewsModel(db.get_connection()).get_all(session['user_id'])
         return render_template('admin_index.html', username=session['username'], news=news)        
-    news = NewsModel(db.get_connection()).get_all(Non)
+    news = NewsModel(db.get_connection()).get_all(None)
     return render_template('index.html', username=session['username'], news=news)
 
 
