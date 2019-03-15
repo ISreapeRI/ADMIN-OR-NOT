@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+           <div class="form-group">
+               <label for="login">Введите логин</label>
+               <textarea class="form-control" id="login" rows="1" name="login"></textarea>
+           </div>
+           <div>
+               <label for="password">Введите пароль для аккаунта</label>
+               <input type="password" class="form-control" id="password" name="password">
+           </div>
+           <button type="submit" class="btn btn-primary">Создать аккаунт</button>
+    </form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1>Вы уже с нами?
+	<a href="/login">Войдите прямо сейчас!</a>
+	</h1>
+{% endblock %}
